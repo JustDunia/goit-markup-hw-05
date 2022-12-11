@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebStudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container flex-container">
+      <div class="header-left-side flex-container">
+        <a class="logo link" href="./index.html"><span class="theme-color">Web</span>Studio</a>
+        <nav class="nav">
+          <ul class="nav-items flex-container">
+            <li class="header-item nav-item">
+              <a href="./index.html" class="link nav-link header-link">Agencja</a>
+            </li>
+            <li class="header-item nav-item">
+              <a href="./portfolio.html" class="link nav-link header-link">Portfolio</a>
+            </li>
+            <li class="header-item nav-item">
+              <a href="#" class="link nav-link header-link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contact-box">
+        <ul class="contact-items flex-container">
+          <li class="header-item contact-item">
+            <a href="mailto:info@devstudio.com" class="link contact-link header-link"><svg class="contact-icon"
+                width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>info@devstudio.com</a>
+          </li>
+          <li class="header-item contact-item">
+            <a href="tel:+48111111111" class="link contact-link header-link"><svg class="contact-icon smartphone-icon"
+                width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>+48 111 111 111</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="portfolio section">
+      <div class="container">
+        <ul class="filter-items">
+          <li class="filter-item">
+            <button class="filter-btn button" type="button">Wszystkie</button>
+          </li>
+          <li class="filter-item">
+            <button class="filter-btn button" type="button">Strony</button>
+          </li>
+          <li class="filter-item">
+            <button class="filter-btn button" type="button">Aplikacje</button>
+          </li>
+          <li class="filter-item">
+            <button class="filter-btn button" type="button">Dizajn</button>
+          </li>
+          <li class="filter-item">
+            <button class="filter-btn button" type="button">Marketing</button>
+          </li>
+        </ul>
+        <ul class="portfolio-items flex-ul">
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-1.jpg"
+                  alt="laptop z wyświetloną stroną internetową naszego autorstwa" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Technocrack</h3>
+                  <p class="portfolio-category">Strona internetowa</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-2.jpg"
+                  alt="cyfrowa grafika przedstawiająca dwóch koszykarzy" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">
+                    Grafika New Orlean vs Golden Star
+                  </h3>
+                  <p class="portfolio-category">Dizajn</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-3.jpg"
+                  alt="logo restauracji Seafood z rybą w tle" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Restauracja Seafood</h3>
+                  <p class="portfolio-category">Aplikacja</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-4.jpg"
+                  alt="czarne słuchawki nauszne" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Projekt Prime</h3>
+                  <p class="portfolio-category">Marketing</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-5.jpg"
+                  alt="dwa kartonowe pudełka z nazwami produktów" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Projekt Boxes</h3>
+                  <p class="portfolio-category">Aplikacja</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-6.jpg"
+                  alt="komputer mac z wyświetloną stroną internetową o nazwie Inspiration has no borders" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Inspiration has no Borders</h3>
+                  <p class="portfolio-category">Strona internetowa</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-7.jpg"
+                  alt="otwarte czasopismo, w którym widać kreatywne zdjęcia" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Magazyn Limited Edition</h3>
+                  <p class="portfolio-category">Dizajn</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-8.jpg"
+                  alt="metka z napisem Labeltag" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Projekt LAB</h3>
+                  <p class="portfolio-category">Marketing</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="#" class="link">
+              <figure class="portfolio-figure">
+                <img class="portfolio-img" width="370" height="294" src="./images/portfolio-9.jpg"
+                  alt="laptop z wyświetloną witryną Growing Business" />
+                <figcaption class="portfolio-text">
+                  <h3 class="portfolio-name">Growing Business</h3>
+                  <p class="portfolio-category">Aplikacja</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-contact-box">
+        <a class="logo link" href="./index.html"><span class="theme-color">Web</span>Studio</a>
+        <address class="address">
+          <p class="address-loc">m. Warszawa, Aleje Jerozolimskie 21</p>
+          <p>
+            <a class="address-contact link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </p>
+          <p>
+            <a class="address-contact link" href="tel:+48111111111">+48 111 111 111</a>
+          </p>
+        </address>
+      </div>
+      <div class="footer-joinus-box">
+        <h3 class="footer-joinus-heading">Dołącz do nas</h3>
+        <ul class="footer-social-icons social-icons">
+          <li>
+            <a href="#" class="footer-social-icon social-icon">
+              <svg class="social-icon-svg" width="20" height="20">
+                <use href="./images/icons.svg#icon-instagram-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-social-icon social-icon">
+              <svg class="social-icon-svg" width="20" height="20">
+                <use href="./images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-social-icon social-icon">
+              <svg class="social-icon-svg" width="20" height="20">
+                <use href="./images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-social-icon social-icon">
+              <svg class="social-icon-svg" width="20" height="20">
+                <use href="./images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
