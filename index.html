@@ -24,7 +24,7 @@
         <nav class="nav">
           <ul class="nav-items flex-container">
             <li class="header-item nav-item">
-              <a href="./index.html" class="link nav-link header-link">Agencja</a>
+              <a href="./index.html" class="link nav-link header-link active-nav-link">Agencja</a>
             </li>
             <li class="header-item nav-item">
               <a href="./portfolio.html" class="link nav-link header-link">Portfolio</a>
@@ -59,7 +59,13 @@
         <h1 class="hero-title">
           Efektywne rozwiązania dla waszego biznesu
         </h1>
-        <button class="hero-button button" type="button">Zamów usługę</button>
+        <button class="hero-button button" type="button" data-modal-open>Zamów usługę</button>
+        <div class="modal-backdrop is-hidden" data-modal>
+          <div class="modal-box">
+            <button type="button" class="modal-close-btn" data-modal-close><img class="modal-close-btn-x" width="14" height="14"
+                src="./images/close-black-18dp (2) 1.svg" alt="close button"></button>
+          </div>
+        </div>
       </div>
     </section>
     <section class="lorem section">
@@ -121,15 +127,24 @@
         <h2 class="section-title">Czym się zajmujemy</h2>
         <ul class="aboutus-items flex-ul">
           <li class="aboutus-item">
-            <img width="370" height="294" src="./images/img-1.jpg" alt="programista piszący kod na tablecie" />
+            <img class="aboutus-img" width="370" height="294" src="./images/img-1.jpg" alt="programista piszący kod na tablecie" />
+            <div class="aboutus-hero">
+              <p>aplikacje komputerowe</p>
+            </div>
           </li>
           <li class="aboutus-item">
-            <img width="370" height="294" src="./images/img-2.jpg"
+            <img class="aboutus-img" width="370" height="294" src="./images/img-2.jpg"
               alt="pracownik i widoczny na ekranie laptopa mobilny wygląd tworzonej aplikacji" />
+            <div class="aboutus-hero">
+              <p>aplikacje mobilne</p>
+            </div>
           </li>
           <li class="aboutus-item">
-            <img width="370" height="294" src="./images/img-3.jpg"
+            <img class="aboutus-img" width="370" height="294" src="./images/img-3.jpg"
               alt="pracownik dobierający kolor z palety kolorów na tablecie" />
+            <div class="aboutus-hero">
+              <p>rozwiązania graficzne</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -399,6 +414,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

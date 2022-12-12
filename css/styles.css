@@ -1,5 +1,6 @@
 :root {
   --theme-color: #2196f3;
+  --theme-color-transparent: #2196f3e5;
   --white: #fff;
   --black: #000000;
   --dark-grey: #212121;
@@ -9,11 +10,13 @@
   --background-grey: #f5f4fa;
   --background-dark: #2f303a;
   --background-dark-transparent: #2f303a66;
+  --aboutus-hero-background: #2f303acc;
   --portfolio-border: #eeeeee;
   --header-border-color: #ececec;
   --icons-inactive: #afb1b8;
   --footer-social-icon-bg: rgba(255, 255, 255, 0.1);
   --border-radius: 4px;
+  --transition-set: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -59,10 +62,6 @@ ul {
   color: inherit;
 }
 
-.link:visited {
-  color: inherit;
-}
-
 .button {
   border: none;
   border-radius: var(--border-radius);
@@ -73,6 +72,7 @@ ul {
 
 .social-icon-svg {
   --color3: currentColor;
+  transition: color var(--transition-set);
 }
 
 .social-icons {
@@ -85,6 +85,7 @@ ul {
   padding: 12px;
   font-size: 0;
   border-radius: 50%;
+  transition: background-color var(--transition-set);
 }
 
 .social-icon:hover,
@@ -128,11 +129,16 @@ ul {
 }
 
 .nav-link {
+  position: relative;
   color: var(--dark-grey);
 }
 
 .contact-link {
   color: var(--light-grey);
+}
+
+.header-link {
+  transition: color var(--transition-set);
 }
 
 .header-link:hover,
@@ -148,6 +154,22 @@ ul {
 
 .smartphone-icon {
   vertical-align: text-top;
+}
+
+.active-nav-link {
+  color: var(--theme-color);
+}
+
+.active-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -34px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--theme-color);
+  pointer-events: none;
 }
 
 /* footer */
@@ -182,6 +204,7 @@ ul {
 
 .address-contact {
   color: var(--white-transparent);
+  transition: color var(--transition-set);
 }
 
 .address-contact:hover,
@@ -257,6 +280,52 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+/* modal */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000033;
+  z-index: 1;
+  transition: opacity 0.6s, transform 0.6s, visibility 0.6s;
+}
+
+.modal-box {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 6px;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.modal-close-btn-x {
+  display: block;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translatey(-100%);
+  pointer-events: none;
+}
+
 /* lorem section */
 
 .lorem {
@@ -279,6 +348,29 @@ ul {
 .lorem-text {
   line-height: 1.71;
   color: var(--light-grey);
+}
+
+/* aboutus section */
+
+.aboutus-item {
+  position: relative;
+}
+
+.aboutus-img {
+  display: block;
+}
+
+.aboutus-hero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 27px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 700;
+  background-color: var(--aboutus-hero-background);
 }
 
 /* team section */
@@ -324,6 +416,7 @@ ul {
 .clients-icon-svg {
   --color2: currentColor;
   --color3: currentColor;
+  transition: color var(--transition-set);
 }
 
 .clients-icon {
@@ -332,6 +425,7 @@ ul {
   border: 1px solid var(--icons-inactive);
   border-radius: var(--border-radius);
   color: var(--icons-inactive);
+  transition: border var(--transition-set);
 }
 
 .clients-icon:hover,
@@ -359,6 +453,8 @@ ul {
   font-size: 16px;
   line-height: 1.625;
   background-color: var(--background-grey);
+  transition: background-color var(--transition-set),
+    color var(--transition-set), box-shadow var(--transition-set);
 }
 
 .filter-btn:hover,
@@ -372,6 +468,10 @@ ul {
 .portfolio-items {
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.portfolio-item {
+  transition: box-shadow var(--transition-set);
 }
 
 .portfolio-item:hover {
@@ -400,4 +500,27 @@ ul {
   font-size: 16px;
   line-height: 1.875;
   color: var(--light-grey);
+}
+
+.portfolio-image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding: 49px 45px 49px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white);
+  background-color: var(--theme-color-transparent);
+  transition: top var(--transition-set);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  top: 0;
 }
